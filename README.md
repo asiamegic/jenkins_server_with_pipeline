@@ -30,7 +30,9 @@ after the first launch, open the container log and look at the token, you will n
 <hr>
 <hr>
 
-<b>From the current link https://github.com/asiamegic/js_counter-service</b>
+<b>From the current link https://github.com/asiamegic/js_counter-service
+<br>
+Main function of the script, the app receives and requests and displays their number</b><br>
 
 there is a JS application project as well as a dockerbuild file for building the image.
 
