@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'node2'
+        label 'agent1'
     }
     parameters {
         string(name: 'BRANCH_NAME', defaultValue: 'master', description: 'Name of the branch to deploy')
@@ -10,7 +10,7 @@ pipeline {
         stage('Git clone') {
             steps {
             sh 'sudo rm -r js_counter-service || true && git clone https://github.com/asiamegic/js_counter-service.git -b dev'
-       
+
             }
         }
 
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-            sh 'cd docker-node-hello-world && sudo docker build -t artemrafikov/artemrepo:counter-service .'
+            sh 'cd js_counter-service && sudo docker build -t artemrafikov/artemrepo:counter-service .'
             }
         }
 
